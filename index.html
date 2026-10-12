@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jimena Segura Béjar</title>
+  <title>Jimena Segura Béjar | Research Scientist & Deep Tech Founder</title>
 
   <meta
     name="description"
-    content="Jimena Segura"
+    content="Research in optimal transport and reinforcement learning."
   >
+
+  <meta property="og:title" content="Jimena Segura Béjar">
+  <meta property="og:description" content="Research in optimal transport and reinforcement learning.">
+  <meta property="og:url" content="https://jimenasegurabejar.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jimenasegurabejar.github.io/me.png">
 
   <link rel="icon" type="image/png" href="me.png">
 
@@ -196,7 +202,7 @@
       letter-spacing:0.01em;
       text-transform:none;
 
-      color:var(--ink);
+      color:var(--ink-soft);
 
       transition:
         color .25s ease,
@@ -449,16 +455,6 @@
     }
 
     .about-photo{
-      width:auto;
-      max-width:100%;
-      height:auto;
-      max-height:420px;
-
-      border-radius:0;
-
-      object-fit:unset;
-      object-position:unset;
-
       display:block;
       margin:0 auto 30px;
     }
@@ -699,17 +695,7 @@
           #fdf2f5,
           #fbe6ee
         );
-
     }
-
-    #featuredin{
-      background:
-        linear-gradient(
-          135deg,
-          #fce4ee,
-          #f8c9dd
-        );
-    }    }
 
     .news-deco{
       position:absolute;
@@ -947,13 +933,9 @@
 
       font-weight:700;
 
-      font-size:clamp(
-        40px,
-        6vw,
-        58px
-      );
+      font-size:40px;
 
-      color:var(--ink);
+      color:#000000;
 
       text-align:center;
 
@@ -976,7 +958,7 @@
 
     .focus-list li{
       font-size:16px;
-      color:var(--ink-soft);
+      color:#000000;
       line-height:1.6;
       text-align:justify;
     }
@@ -1007,7 +989,7 @@
 
       font-size:16px;
 
-      color:var(--ink);
+      color:#000000;
     }
 
     section.page .body-text p + p{
@@ -1241,14 +1223,13 @@
 
       margin-top:12px;
 
-      font-size:14px;
+      font-size:17px;
 
       font-weight:600;
 
       color:var(--ink);
 
-      border-bottom:
-        1px solid var(--rose);
+      border-bottom:none;
 
       transition:
         color .2s ease,
@@ -1917,13 +1898,6 @@
         height:190px;
       }
 
-      .about-photo{
-        width:auto;
-        max-width:100%;
-        height:auto;
-        max-height:260px;
-      }
-
       .companies-side-img{
         display:none;
       }
@@ -1984,10 +1958,14 @@
       About
     </a>
 
-    <a
-      href="publications.html"
-    >
+    <a href="#research">
       Publications
+    </a>
+
+    <a
+      href="portfolio.html"
+    >
+      Portfolio
     </a>
 
     <a href="#news">
@@ -1997,23 +1975,15 @@
     <a
       href="https://jimenasegurabejar.github.io/companies"
     >
-      Research Companies
+      Companies
     </a>
 
-    <a href="https://jimenasegurabejar.github.io/featured">
+    <a href="#featuredin">
       Featured
     </a>
 
-    <a
-      href="https://jimenasegurabejar.github.io/invitedtalks"
-    >
-      Speaker
-    </a>
-
     <div class="nav-dropdown">
-      <a
-        href="https://jimenasegurabejar.github.io/blog"
-      >
+      <a>
         Blog
       </a>
 
@@ -2041,6 +2011,30 @@
           href="https://jimenasegurabejar.github.io/tutorialforestbutterflyot"
         >
           ForestButterflyOT Tutorial
+        </a>
+
+        <a
+          href="https://jimenasegurabejar.github.io/monarchbutterflyotintroduction"
+        >
+          MonarchButterflyOT Intro
+        </a>
+
+        <a
+          href="https://jimenasegurabejar.github.io/tutorialmonarchbutterflyot"
+        >
+          MonarchButterflyOT Tutorial
+        </a>
+
+        <a
+          href="https://jimenasegurabejar.github.io/learningasachildintroduction"
+        >
+          Learning as a Child Intro
+        </a>
+
+        <a
+          href="https://jimenasegurabejar.github.io/tutoriallearningasachild"
+        >
+          Learning as a Child Tutorial
         </a>
 
       </div>
@@ -2343,7 +2337,7 @@
     <div class="hero-content">
 
       <h1>
-        <span class="first-name-wrap">Jimena<img src="me.png" alt="" class="name-icon"></span> Segura
+        <span class="first-name-wrap">Jimena<img src="me.png" alt="" class="name-icon"></span> <span class="second-name-wrap"><img src="me.png" alt="" class="name-icon name-icon-left">Segura</span>
       </h1>
 
     </div>
@@ -2365,7 +2359,7 @@
 
       <img
         class="profile-photo about-photo"
-        src="jimenasegura.jpeg"
+        src="jimena.png"
         alt="Jimena Segura"
       >
 
@@ -2376,45 +2370,44 @@
       <div class="body-text">
 
         <p>
-          My research sits at the intersection of
+          I have authored four papers in geometric reinforcement
+          learning, spanning Wasserstein-based policy aggregation
+          and hierarchical optimal transport. My research sits at
+          the intersection of
           <strong>optimal transport</strong>
-          and reinforcement learning. Questions I'm exploring:
-          along which axes we should scale decentralized
-          training to make Wasserstein-geometric aggregation
-          practical at frontier scale, whether we can unlock
-          emergent properties, transfer across tasks, in-context
-          adaptation, in policies trained under
-          Schrödinger-bridge aggregation rather than parameter
-          averaging, and how geometric aggregation rules should
-          interact with standard federated and distributed
-          learning methods to make large-scale decentralized RL
-          discoveries possible.
+          and reinforcement learning, scaling Wasserstein-geometric
+          aggregation for decentralized training, and asking whether
+          Schrödinger-bridge aggregation, in place of parameter
+          averaging, unlocks emergent properties and cross-task
+          transfer in policies trained at frontier scale.
+          Currently, I'm creating <strong><a href="https://physisresearch.com" target="_blank" rel="noopener">Physis Research</a></strong>.
         </p>
 
         <p>
-          Additionally, I've been developing
+          Additionally, I'm the author of 5
           <a
-            href="publications.html"
+            href="https://jimenasegurabejar.github.io/portfolio"
+            class="partner-highlight"
           >
-            Theoretical Frameworks
-          </a
-          <a
-            href="https://athenei.com"
-          >
-            Athenei
-          </a
+            Foundational Models
+          </a>
+          in brain organoids and cellular agriculture published in <span class="partner-highlight">Nature Methods</span> and <span class="partner-highlight">Nature Communications</span>.
         </p>
 
         <p>
-          Beyond this, at 16, I founded
+          Beyond this, I founded
           <a
             href="https://imasion.org/"
+            target="_blank"
+            rel="noopener"
           >
             Imasion
           </a>
-          , a non-profit working to
-          impact the 2.1 billion children in the planet Earth,
-          backed by <span class="partner-highlight">MIT Solve</span>, <span class="partner-highlight">UN Women</span>,
+          , a non-profit, working to democratize the next
+          generation of climate education in underserved
+          communities in Peru, backed by
+          <span class="partner-highlight">MIT Solve</span>,
+          <span class="partner-highlight">UN Women</span>,
           <span class="partner-highlight">Catalyst Now</span>,
           <span class="partner-highlight">Malala Fund</span>,
           <span class="partner-highlight">Earth Guardians</span>,
@@ -2584,9 +2577,9 @@
 
       <a
         class="see-more-btn"
-        href="publications.html"
+        href="portfolio.html"
       >
-        Publications
+        Portfolio
       </a>
 
     </div>
@@ -2790,6 +2783,14 @@
         </div>
 
         <div class="news-row">
+          <span class="news-date">Jun 06, 2026</span>
+          <p class="news-text">
+            Started a research internship at
+            <strong>Proxy Foods</strong> <span class="news-emoji">🍽️</span>.
+          </p>
+        </div>
+
+        <div class="news-row">
           <span class="news-date">Mar 30, 2026</span>
           <p class="news-text">
             New note or talk on
@@ -2849,6 +2850,22 @@
         </div>
 
         <div class="news-row">
+          <span class="news-date">Oct 09, 2025</span>
+          <p class="news-text">
+            Attended the <strong>Women in AI Breakfast</strong> by
+            PillarVC <span class="news-emoji">☕</span>.
+          </p>
+        </div>
+
+        <div class="news-row">
+          <span class="news-date">Oct 08, 2025</span>
+          <p class="news-text">
+            Attended <strong>"From Bench to Breakthrough"</strong>,
+            an AI for Science Salon by PillarVC <span class="news-emoji">🔬</span>.
+          </p>
+        </div>
+
+        <div class="news-row">
           <span class="news-date">Oct 05, 2025</span>
           <p class="news-text">
             <a href="#" target="_blank" rel="noopener">A workshop or panel</a>
@@ -2870,6 +2887,14 @@
           <div class="news-buttons">
             <a class="news-btn" href="#" target="_blank" rel="noopener">Slides</a>
           </div>
+        </div>
+
+        <div class="news-row">
+          <span class="news-date">Sep 02, 2025</span>
+          <p class="news-text">
+            Attended <strong>"Translating Discovery"</strong>,
+            an AI for Science Salon <span class="news-emoji">🔬</span>.
+          </p>
         </div>
 
         <div class="news-row">
@@ -3200,6 +3225,8 @@
             <a
               class="detail-link"
               href="https://jimenasegurabejar.github.io/atheneibiosciences#research"
+              target="_blank"
+              rel="noopener"
             >
               Our Research
             </a>
@@ -3240,6 +3267,8 @@
             <a
               class="detail-link"
               href="https://imasion.org/"
+              target="_blank"
+              rel="noopener"
             >
               imasion
             </a>
@@ -3247,13 +3276,26 @@
             <a
               class="detail-link"
               href="https://imasionkids.org/"
+              target="_blank"
+              rel="noopener"
             >
               imasionkids
             </a>
 
             <a
               class="detail-link"
+              href="https://x.com/imasionkids"
+              target="_blank"
+              rel="noopener"
+            >
+              imasionkids x
+            </a>
+
+            <a
+              class="detail-link"
               href="https://imasionkits.org/"
+              target="_blank"
+              rel="noopener"
             >
               imasionkits
             </a>
@@ -3261,13 +3303,26 @@
             <a
               class="detail-link"
               href="https://imasionteachers.org/"
+              target="_blank"
+              rel="noopener"
             >
               imasionteachers
             </a>
 
             <a
               class="detail-link"
+              href="https://x.com/imasionteachers"
+              target="_blank"
+              rel="noopener"
+            >
+              imasionteachers x
+            </a>
+
+            <a
+              class="detail-link"
               href="https://imasion.ai/"
+              target="_blank"
+              rel="noopener"
             >
               imasionai
             </a>
@@ -3275,8 +3330,109 @@
             <a
               class="detail-link"
               href="https://www.instagram.com/imasionorg/"
+              target="_blank"
+              rel="noopener"
             >
               impact
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://x.com/imasionorg"
+              target="_blank"
+              rel="noopener"
+            >
+              x
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasion.org/science"
+              target="_blank"
+              rel="noopener"
+            >
+              science
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasion.org/ourcurriculum"
+              target="_blank"
+              rel="noopener"
+            >
+              ourcurriculum
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasionmethodology.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              methodology
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasionimpactreports.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              impactreports
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasionannualreports.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              annualreports
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasion.org/about/careers"
+              target="_blank"
+              rel="noopener"
+            >
+              careers
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://support.imasion.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              support
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://donate.imasion.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              donate
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://blog.imasion.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              blog
+            </a>
+
+            <a
+              class="detail-link"
+              href="https://imasionbiolabs.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              biolabs
             </a>
 
           </div>
@@ -3376,22 +3532,22 @@
   <footer>
 
     <div class="footer-links">
-      <a href="https://x.com/jimenasegurab" class="icon-link" aria-label="X">
+      <a href="https://x.com/JimenaS86541537" target="_blank" rel="noopener" class="icon-link" aria-label="X">
         <svg viewBox="0 0 24 24" width="52" height="52" fill="currentColor">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
       </a>
-      <a href="https://github.com/jimenasegurab" class="icon-link" aria-label="GitHub">
+      <a href="https://github.com/jimenasegurabejar" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
         <svg viewBox="0 0 24 24" width="52" height="52" fill="currentColor">
           <path d="M12 .5C5.7.5.5 5.7.5 12c0 5 3.2 9.3 7.8 10.8.6.1.8-.2.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.6A10.5 10.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/>
         </svg>
       </a>
-      <a href="https://scholar.google.com/citations?user=NRhphvgAAAAJ&hl=en&authuser=2" class="icon-link" aria-label="Google Scholar">
+      <a href="#" target="_blank" rel="noopener" class="icon-link" aria-label="Google Scholar">
         <svg viewBox="0 0 24 24" width="52" height="52" fill="currentColor">
           <path d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zM5 13.18v4.36L12 21l7-3.46v-4.36L12 17l-7-3.82z"/>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/jimena-segura-bejar/" class="icon-link" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/jimena-segura-bejar/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" width="52" height="52" fill="currentColor">
           <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.11 20.45H3.56V9h3.55v11.45z"/>
         </svg>
@@ -3404,7 +3560,7 @@
       </a>
     </div>
 
-    © Jimena Segura Béjar. All Rights Reserved.
+    © Jimena Segura. All Rights Reserved.
 
   </footer>
 
